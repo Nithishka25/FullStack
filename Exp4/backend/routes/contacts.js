@@ -1,0 +1,1 @@
+import express from 'express';import Contact from '../models/Contact.js';const r=express.Router();r.get('/',async(req,res)=>res.json(await Contact.find().sort({date:-1})));r.post('/',async(req,res)=>{const it=new Contact(req.body);await it.save();res.json(it)});export default r;
