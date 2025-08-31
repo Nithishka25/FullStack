@@ -1,0 +1,30 @@
+.AppContainer {
+  position: relative;
+  height: 100vh;
+  color:White;
+  background-color: #282c34;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.moving-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #61dafb;
+  white-space: nowrap;
+  animation: moveRight 20s linear infinite;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 200px); /* adjust based on text width */
+  }
+}
